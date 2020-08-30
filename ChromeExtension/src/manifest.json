@@ -1,0 +1,26 @@
+{
+    "name": "KataKataPochiPochiByun",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Sample Chrome Extension",
+    "content_scripts": [{
+        "matches": ["https://*/*","http://*/*"],
+        "js": [
+        "caretposition.js",
+        "jquery-3.5.1.min.js",
+        "setting.js",
+        "main.js"
+        ]
+    }],
+    "permissions":["storage"],
+    "web_accessible_resources":[
+        "images/*.svg"
+    ],
+    "browser_action": {
+        "default_title": "",
+        "default_popup": "popup.html"
+    }
+    // "options_ui":{
+    //     "page" : "popup.html"
+    // }
+}
